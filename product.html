@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — AVÉN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">AVÉN</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="product.html" class="active">Shop</a>
+      <a href="product.html?category=rings">Rings</a>
+      <a href="product.html?category=necklaces">Necklaces</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <div class="nav-right">
+      <a href="order.html" class="bag-btn">Bag <span class="bag-count" data-bag-count>0</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="shop-header">
+  <div class="wrap">
+    <div class="small-label">SHOP THE COLLECTION</div>
+    <h1 class="display-2" style="margin-top:10px;">All Pieces</h1>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="shop-toolbar">
+    <div class="filter-pills">
+      <button class="pill" data-filter="all">All</button>
+      <button class="pill" data-filter="rings">Rings</button>
+      <button class="pill" data-filter="necklaces">Necklaces</button>
+      <button class="pill" data-filter="bracelets">Bracelets</button>
+      <button class="pill" data-filter="earrings">Earrings</button>
+      <button class="pill" data-filter="limited">Limited</button>
+    </div>
+    <div class="search-field">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="shop-search" placeholder="Search pieces…">
+    </div>
+  </div>
+
+  <div class="product-grid" id="shop-grid"></div>
+  <div class="empty-state" id="shop-empty" style="display:none;">No pieces match your search.</div>
+</div>
+
+<footer class="site-footer mt-64" style="margin-top:80px;">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">AVÉN</div>
+        <p class="footer-tag">Modern minimal jewelry, designed in small, considered batches.</p>
+      </div>
+      <div class="footer-col">
+        <h4>SHOP</h4>
+        <ul>
+          <li><a href="product.html?category=rings">Rings</a></li>
+          <li><a href="product.html?category=necklaces">Necklaces</a></li>
+          <li><a href="product.html?category=bracelets">Bracelets</a></li>
+          <li><a href="product.html?category=earrings">Earrings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="order.html">Your Bag</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="index.html#story">Our Story</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AVÉN. All rights reserved.</span>
+      <span>Bangkok, Thailand</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

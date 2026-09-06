@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — AVÉN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="admin-side">
+    <div>
+      <a href="index.html" class="logo">AVÉN</a>
+      <div class="small-label" style="margin-top:6px;">ADMIN</div>
+    </div>
+    <nav class="admin-nav">
+      <a href="admin.html" class="active">Dashboard</a>
+      <a href="product.html">View Shop</a>
+      <a href="order.html">View Bag</a>
+    </nav>
+    <a href="index.html" class="foot-link">← Back to site</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-top">
+      <div>
+        <div class="small-label">OVERVIEW</div>
+        <h1 class="display-2" style="margin-top:8px;">Dashboard</h1>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">TOTAL ORDERS</div>
+        <div class="stat-value" id="stat-orders">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">TOTAL REVENUE</div>
+        <div class="stat-value" id="stat-revenue">฿0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">TOTAL PRODUCTS</div>
+        <div class="stat-value" id="stat-products">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">PENDING ORDERS</div>
+        <div class="stat-value" id="stat-pending">0</div>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Total</th>
+              <th>Payment</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="orders-table-body"></tbody>
+        </table>
+      </div>
+      <div class="admin-empty" id="admin-empty">No orders yet. Once a customer checks out, orders will appear here.</div>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
