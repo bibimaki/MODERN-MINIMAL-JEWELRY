@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed — AVÉN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">AVÉN</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="product.html?category=rings">Rings</a>
+      <a href="product.html?category=necklaces">Necklaces</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <div class="nav-right">
+      <a href="order.html" class="bag-btn">Bag <span class="bag-count" data-bag-count>0</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="thankyou-wrap">
+  <div class="confirm-card">
+    <svg class="check-ring" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Order confirmed">
+      <circle cx="37" cy="37" r="35"/>
+      <path d="M22 38 L32 48 L52 26"/>
+    </svg>
+    <div class="small-label">ORDER CONFIRMED</div>
+    <h1 class="display-2" style="margin-top:12px;">Your AVÉN piece is on its way.</h1>
+
+    <div id="confirm-content">
+      <div class="confirm-order-id" id="confirm-order-id"></div>
+
+      <div class="confirm-summary" id="confirm-summary">
+        <div id="confirm-summary-lines"></div>
+        <div class="summary-row">
+          <span>Payment Method</span>
+          <span id="confirm-payment"></span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="confirm-total"></span>
+        </div>
+      </div>
+
+      <div class="confirm-actions">
+        <a href="product.html" class="btn btn-dark">Continue Shopping</a>
+        <a href="admin.html" class="btn btn-ghost">View in Admin</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
