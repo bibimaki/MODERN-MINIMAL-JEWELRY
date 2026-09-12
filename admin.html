@@ -8,7 +8,21 @@
 </head>
 <body class="admin-body">
 
-<div class="admin-shell">
+<div class="admin-gate" id="admin-gate">
+  <div class="admin-gate-card">
+    <div class="logo">AVÉN</div>
+    <div class="small-label" style="margin-top:10px;">ADMIN ACCESS</div>
+    <form id="admin-gate-form">
+      <label for="admin-gate-input" class="visually-hidden">Admin passcode</label>
+      <input type="password" id="admin-gate-input" placeholder="Enter passcode" autocomplete="off" required>
+      <button type="submit" class="btn btn-line btn-full" style="margin-top:20px;">Enter Dashboard</button>
+      <div class="admin-gate-error" id="admin-gate-error">Incorrect passcode — please try again.</div>
+    </form>
+    <p class="admin-gate-note">This is a basic access gate for convenience only — it is not a secure authentication system. Don't store sensitive data behind it.</p>
+  </div>
+</div>
+
+<div class="admin-shell" style="display:none;">
   <aside class="admin-side">
     <div>
       <a href="index.html" class="logo">AVÉN</a>
@@ -49,6 +63,20 @@
       </div>
     </div>
 
+    <div class="admin-toolbar">
+      <div class="admin-filters">
+        <button class="pill active" data-order-filter="all">All</button>
+        <button class="pill" data-order-filter="Pending">Pending</button>
+        <button class="pill" data-order-filter="Paid">Paid</button>
+        <button class="pill" data-order-filter="Shipping">Shipping</button>
+      </div>
+      <div class="search-field">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <label for="admin-search" class="visually-hidden">Search orders</label>
+        <input type="text" id="admin-search" placeholder="Search by order ID, name, or email…">
+      </div>
+    </div>
+
     <div class="table-card">
       <div class="table-scroll">
         <table class="orders-table">
@@ -67,9 +95,27 @@
       </div>
       <div class="admin-empty" id="admin-empty">No orders yet. Once a customer checks out, orders will appear here.</div>
     </div>
+
+    <div class="table-card">
+      <h3>Stock Overview</h3>
+      <div class="table-scroll">
+        <table class="orders-table stock-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody id="stock-table-body"></tbody>
+        </table>
+      </div>
+    </div>
   </main>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

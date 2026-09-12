@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="hero-visual">
-      <img src="images/hero-brand.jpg" alt="AVÉN jewelry">
+      <img src="images/hero-brand.jpg" alt="AVÉN jewelry" onerror="this.style.display='none'">
     </div>
   </div>
 </section>
@@ -108,7 +108,8 @@
     <h2 class="display-3">Stay close to AVÉN</h2>
     <p class="lede" style="margin:14px auto 0;color:var(--pewter-line);">New pieces, restocks, and quiet updates. No noise.</p>
     <form class="news-form">
-      <input type="email" placeholder="Your email address" required>
+      <label for="newsletter-email" class="visually-hidden">Email address</label>
+      <input type="email" id="newsletter-email" placeholder="Your email address" required>
       <button type="submit" class="btn btn-line">Subscribe</button>
     </form>
     <p class="news-note">Unsubscribe anytime.</p>
@@ -155,6 +156,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

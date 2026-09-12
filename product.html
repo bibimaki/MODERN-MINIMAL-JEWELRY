@@ -29,6 +29,7 @@
   <div class="wrap">
     <div class="small-label">SHOP THE COLLECTION</div>
     <h1 class="display-2" style="margin-top:10px;">All Pieces</h1>
+    <p class="data-note" id="shop-data-note"></p>
   </div>
 </div>
 
@@ -42,9 +43,21 @@
       <button class="pill" data-filter="earrings">Earrings</button>
       <button class="pill" data-filter="limited">Limited</button>
     </div>
-    <div class="search-field">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="shop-search" placeholder="Search pieces…">
+    <div class="toolbar-right">
+      <div class="sort-field">
+        <label for="shop-sort" class="visually-hidden">Sort by</label>
+        <select id="shop-sort">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name">Name: A–Z</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <label for="shop-search" class="visually-hidden">Search pieces</label>
+        <input type="text" id="shop-search" placeholder="Search pieces…">
+      </div>
     </div>
   </div>
 
@@ -92,6 +105,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
